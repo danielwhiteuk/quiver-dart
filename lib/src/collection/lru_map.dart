@@ -298,6 +298,6 @@ class LinkedLruHashMap<K, V> implements LruMap<K, V> {
 
     // Remove the tail element itself.
     _tail = _tail.previous;
-    _tail.next = null;
+    if (_tail != null) _tail.next = null;
   }
 }
